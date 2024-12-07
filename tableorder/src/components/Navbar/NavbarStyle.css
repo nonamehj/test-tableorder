@@ -1,0 +1,111 @@
+.nav {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.25rem;
+  /* border: 1px solid red; */
+}
+.nav-center h2 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.nav-number-center {
+  margin-bottom: 1rem;
+  margin-right: 1.25rem;
+  padding: 0.5rem;
+  background-color: darkorange;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-number-center .icon {
+  font-size: 1.1rem;
+  margin-right: 8px;
+  line-height: 1;
+}
+.nav-number-table {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 479px) {
+  .nav {
+  }
+  .nav-container {
+    justify-content: center;
+    position: relative;
+    /* border: 1px solid blue; */
+  }
+  .nav-center {
+    margin-left: 0;
+  }
+  .nav-center h2 {
+    font-size: 1.8rem;
+    padding: 0.15rem;
+  }
+  .nav-number-center {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    padding: 0.5rem;
+    margin-right: 0;
+  }
+  .nav-number-center .icon {
+    font-size: 0.9rem;
+  }
+  .nav-number-table {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .nav {
+  }
+  .nav-container {
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+  .nav-center {
+    margin-left: 0;
+  }
+  .nav-center h2 {
+    font-size: 1.9rem;
+    padding: 0.15rem;
+  }
+  .nav-number-center {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0.75rem;
+    margin-right: 0;
+  }
+  .nav-number-center .icon {
+    font-size: 1rem;
+  }
+  .nav-number-table {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-center {
+    margin-left: 1.25rem;
+  }
+}

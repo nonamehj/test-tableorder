@@ -1,0 +1,25 @@
+.section {
+  display: flex;
+  border-radius: 0.25rem;
+  /* background-color: red; */
+  overflow: hidden;
+  /* width: 100%; */
+}
+.menulist-container {
+  display: flex;
+  width: 100%;
+  /* overflow: hidden; */
+  border: 1px solid blue;
+}
+
+.menulist-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(230px, 250px);
+  height: 100%;
+  width: 100%;
+  /* padding: 0.15rem; */
+  /* margin: 0.15rem; */
+  /* border: 1px solid red; */
+  overflow: auto;
+}
