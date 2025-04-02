@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../context";
 import "./MenuListStyle.css";
 import Items from "./Items";
 const MenuList = () => {
-  const { menus, isAddItemOpen } = useGlobalContext();
+  const { menus } = useGlobalContext();
   const valueRef = useRef();
 
   useEffect(() => {

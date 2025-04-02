@@ -3,10 +3,10 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 
 const Items = ({ img, title, price, id, category }) => {
-  const { isShowModal } = useGlobalContext();
+  const { openModal } = useGlobalContext();
 
   return (
-    <article className="item-article" onClick={() => isShowModal(id, category)}>
+    <article className="item-article" onClick={() => openModal(id, category)}>
       <div className="item-container">
         <div className="item-img">
           <img src={img} alt={title} className="single-item-img" />

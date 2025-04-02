@@ -1,23 +1,20 @@
-import React, { useRef } from "react";
+import React, { useRef, useCallback } from "react";
 import { FaTimes, FaClipboardCheck } from "react-icons/fa";
 import { useGlobalContext } from "../../../context";
 import "./ItemCartStyle.css";
-import ItemCartDatails from "./ItemCartDatails";
+import ItemCartDetails from "./ItemCartDetails";
 const ItemCart = () => {
-  const {
-    total,
-    isCartOpen,
-    cartItem,
-    isItemCartClose,
-    cartAmount,
-    submitOrder,
-  } = useGlobalContext();
+  const { total, isCartOpen, cartItem, closeCart, cartAmount, placeOrder } =
+    useGlobalContext();
   const cartRef = useRef("");
-  const handleContainerClick = (e) => {
-    if (cartRef.current && !cartRef.current.contains(e.target)) {
-      isItemCartClose();
-    }
-  };
+  const handleContainerClick = useCallback(
+    (e) => {
+      if (cartRef.current && !cartRef.current.contains(e.target)) {
+        closeCart();
+      }
+    },
+    [closeCart]
+  );
   return (
     <div
       className={`${isCartOpen ? "cart show-cart" : "cart"}`}
@@ -29,7 +26,7 @@ const ItemCart = () => {
         </div>
         <div className="cart-items-container">
           {cartItem.map((item) => {
-            return <ItemCartDatails key={item.uniqueId} {...item} />;
+            return <ItemCartDetails key={item.uniqueId} {...item} />;
           })}
         </div>
         <div className="cart-item-total">
@@ -41,11 +38,11 @@ const ItemCart = () => {
           </div>
         </div>
         <div className="cart-btns">
-          <button className="cart-left" onClick={isItemCartClose}>
+          <button className="cart-left" onClick={closeCart}>
             <FaTimes className="icon" />
             <span>닫기</span>
           </button>
-          <button className="cart-right" onClick={submitOrder}>
+          <button className="cart-right" onClick={placeOrder}>
             <FaClipboardCheck className="icon" />
             <span>주문하기</span>
           </button>

@@ -5,15 +5,8 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import OptionItem from "./OptionItem";
 const ModalItem = () => {
-  const {
-    isModalOpen,
-    modalItem,
-
-    isCloseModal,
-
-    addItemCart,
-  } = useGlobalContext();
-  // const [infoOption, setInfoOption] = useState(false);
+  const { isModalOpen, modalItem, closeModal, addItemCart } =
+    useGlobalContext();
   const [value, setValue] = useState(0);
   const [selectDrinkOption, setSelectDrinkOption] = useState("");
   useEffect(() => {
@@ -51,7 +44,7 @@ const ModalItem = () => {
           })}
         </div>
         <div className="order-btn">
-          <button className="close-modal-btn" onClick={isCloseModal}>
+          <button className="close-modal-btn" onClick={closeModal}>
             <FaTimes className="icon" />
             <span>닫기</span>
           </button>

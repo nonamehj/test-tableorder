@@ -29,15 +29,10 @@ const initialState = {
   cartTotalAmount: 0, //장바구니 총 수량- 주문내역 총수량
   orderId: 0, //아이디
   table: 1, //테이블 번호
-  // quantity: 0,
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  // console.log("cart", state.cartItem);
-  // console.log("state", state);
-  // console.log("orderitem", state.orderItems);
-
   const toggleCategories = useCallback((category) => {
     let tempItem;
     if (category === "전체") {
@@ -50,66 +45,67 @@ const AppProvider = ({ children }) => {
   }, []);
 
   /*모달 열기*/
-  const isShowModal = useCallback((id, category) => {
+  const openModal = useCallback((id, category) => {
     dispatch({ type: "SHOW_MODAL", payload: { id, category } });
   }, []);
 
   /*모달 닫기*/
-  const isCloseModal = () => {
+  const closeModal = useCallback(() => {
     dispatch({ type: "CLOSE_MODAL" });
-  };
+  }, []);
   /*음료 타입  */
-  const addDrinkType = (type) => {
+  const addDrinkType = useCallback((type) => {
     dispatch({ type: "MODAL_DRINK_TYPE", payload: type });
-  };
+  }, []);
   /*음료 사이즈 */
-  const addDrinkSize = (size) => {
+  const addDrinkSize = useCallback((size) => {
     dispatch({ type: "MODAL_DRINK_SIZE", payload: size });
-  };
+  }, []);
   /* 음료 수량*/
-  const modalAmount = (type) => {
+  const modalAmount = useCallback((type) => {
     dispatch({ type: "MODAL_ITEM_AMOUNT", payload: type });
-  };
+  }, []);
   /*옵션 수량 */
-  const modalQuantity = (type, id) => {
+  const modalQuantity = useCallback((type, id) => {
     dispatch({ type: "MODAL_QUANTITY", payload: { type, id } });
-  };
+  }, []);
   /*모달에서 장바구니 담기 */
-  const addItemCart = () => {
+  const addItemCart = useCallback(() => {
     dispatch({ type: "ADD_ITEM_CART" });
-  };
+  }, []);
   /*footer카트 오픈 */
-  const isShowCart = () => {
+  const openCart = useCallback(() => {
     dispatch({ type: "SHOW_CART", payload: state.isCartOpen });
-  };
+  }, [state.isCartOpen]);
   /*장바구니 닫기 */
-  const isItemCartClose = () => {
+  const closeCart = useCallback(() => {
     dispatch({ type: "CLOSE_CART" });
-  };
+  }, []);
+  /*장바구니 주문하기 */
+  const placeOrder = useCallback(() => {
+    dispatch({ type: "ORDER_ITEMS" });
+  }, []);
   /*장바구니 수량 증가 감소 */
-  const cartItemQuantity = (actionType, uniqueId) => {
+  const cartItemQuantity = useCallback((actionType, uniqueId) => {
     dispatch({ type: "CART_ITEM_QUANTITY", payload: { actionType, uniqueId } });
-  };
+  }, []);
 
   /*장바구니 아이템 삭제 */
-  const cartItemsDelete = (id) => {
+  const removeCartItem = useCallback((id) => {
     dispatch({ type: "CART_ITEMS_DELETE", payload: id });
-  };
-  /*장바구니 주문하기 */
-  const submitOrder = () => {
-    dispatch({ type: "ORDER_ITEMS" });
-  };
+  }, []);
+
   /*주문후 주문 완료  */
-  const isOrderClose = () => {
+  const closeOrderModal = useCallback(() => {
     dispatch({ type: "CLOSE_ORDER" });
-  };
+  }, []);
   /*footer 주문내역 열기 */
-  const orderDetails = () => {
+  const showOrderDetails = useCallback(() => {
     dispatch({ type: "ORDER_DETAILS_OPEN" });
-  };
-  const closeOrderDetails = () => {
+  }, []);
+  const closeOrderDetails = useCallback(() => {
     dispatch({ type: "ORDER_DETAILS_CLOSE" });
-  };
+  }, []);
   useEffect(() => {
     if (state.cartItem.length > 0) {
       dispatch({
@@ -124,7 +120,6 @@ const AppProvider = ({ children }) => {
     } else {
       dispatch({
         type: "CART_AMOUNT",
-        // payload: { isCartOpen: false },
       });
     }
   }, [state.cartItem]);
@@ -133,19 +128,19 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         toggleCategories,
-        isShowModal,
-        isCloseModal,
-        isShowCart,
+        openModal,
+        closeModal,
+        openCart,
         modalQuantity,
         addDrinkType,
         addDrinkSize,
         modalAmount,
         addItemCart,
-        isItemCartClose,
-        cartItemsDelete,
-        submitOrder,
-        isOrderClose,
-        orderDetails,
+        closeCart,
+        removeCartItem,
+        placeOrder,
+        closeOrderModal,
+        showOrderDetails,
         closeOrderDetails,
         cartItemQuantity,
       }}

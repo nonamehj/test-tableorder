@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useGlobalContext } from "../../../context";
 import "./OptionItemStyle.css";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
@@ -26,7 +26,7 @@ const OptionItem = ({
         <div className="modal-info">
           <div className="modal-item-title">
             <h3>{title}</h3>
-            {selectDrinkOption && <span>{`(${selectDrinkOption})`}</span>}
+            {selectDrinkOption && <span>{`${selectDrinkOption}`}</span>}
           </div>
           <div className="drink-type">
             {drinkOption.map((drink) => {
@@ -47,7 +47,11 @@ const OptionItem = ({
           </div>
         </div>
         <div className="selected-items-info">
-          {selectDrinkOption === "" ? null : (
+          {!selectDrinkOption ? (
+            <div className="drink-type-warning">
+              <p>핫 또는 아이스를 선택해주세요.</p>
+            </div>
+          ) : (
             <div className="items-info">
               <div className="size-selection-row">
                 <h4>사이즈</h4>
@@ -120,4 +124,4 @@ const OptionItem = ({
   );
 };
 
-export default OptionItem;
+export default memo(OptionItem);

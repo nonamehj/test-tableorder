@@ -15,20 +15,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-  height: 80%;
-  padding: 0.5rem;
+  height: 90%;
+  padding: 0.25rem;
   display: flex;
   flex-direction: column;
   background-color: #4d4d4d;
+
   border-radius: 0.25rem;
+  /*아래 확인후  제대로된 위치 넣거나 삭제하기 max-width,height*/
+  /* max-width: 800px; */
+  /* max-height: 500px; */
+  overflow: hidden;
 }
 .modal-content h2 {
   flex: 0 0 64px;
   display: flex;
   align-items: center;
-  margin-bottom: 0.35rem;
-  pad: 0.125rem 0.8rem;
-  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  /* font-size: 1.6rem; */
   background-color: #000;
   color: yellow;
   border-top-left-radius: 0.25rem;
@@ -37,13 +44,14 @@
 .modal-items-list {
   flex: 1;
   display: flex;
-  /* margin-bottom: 0.25rem; */
-  padding: 0.25rem;
+  /* padding: 0.25rem; */
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* border: 1px solid red; */
 }
 .order-btn {
-  flex: 0 0 50px;
+  /* flex: 0 0 50px; */
+  flex: 0 0 54px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,14 +66,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   color: #000;
 }
 .close-modal-btn {
   flex: 0 35%;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #b0b0b0;
   color: #000;
   border-bottom-left-radius: 0.25rem;
 }
@@ -79,7 +88,7 @@
 .close-modal-btn .icon,
 .add-cart-btn .icon {
   margin-right: 8px;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   line-height: 1;
 }
 .close-modal-btn span,
@@ -112,27 +121,19 @@
   }
   .modal-content h2 {
     flex: 0 0 60px;
-    margin-bottom: 0.25rem;
-    padding: 0.25rem 0;
     padding-left: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
-  .modal-items-list {
-    margin-bottom: 0.25rem;
-    margin-bottom: 0;
+  /*공통패딩*/
+  /* .modal-items-list {
     padding: 0.25rem;
-  }
+  } */
   .order-btn {
     flex: 0 0 50px;
-    margin-top: 0.25rem;
+    /* margin-top: 0.25rem; */
   }
   .close-modal-btn,
   .add-cart-btn {
-    font-size: 1rem;
-  }
-  .close-modal-btn .icon,
-  .add-cart-btn .icon {
-    /* margin-right: 6px; */
     font-size: 1rem;
   }
 }
@@ -143,150 +144,131 @@
     right: 0;
     left: 0;
     top: 0;
-    transform: translateY(90px);
-    max-height: calc(100% - 90px);
     width: 100%;
     height: 100%;
-    padding: 0.35rem;
+    transform: translateY(90px);
+    max-height: calc(100% - 90px);
+    max-width: 800px;
   }
   .modal-content h2 {
     flex: 0 0 62px;
-    margin-bottom: 0.25rem;
-    padding: 0.25rem 0;
-    padding-left: 0.5rem;
-    font-size: 1.4rem;
+    padding-left: 0.75rem;
+    font-size: 1.45rem;
   }
-  .modal-items-list {
-    margin-bottom: 0;
-    padding: 0.25rem;
-  }
+
   .order-btn {
-    flex: 0 0 50px;
-    margin-top: 0.25rem;
+    flex: 0 0 52px;
+    /* margin-top: 0.25rem; */
   }
   .close-modal-btn,
   .add-cart-btn {
-    font-size: 1.1rem;
-  }
-  .close-modal-btn .icon,
-  .add-cart-btn .icon {
-    /* margin-right: 6px; */
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .modal-content {
     width: 70%;
-    height: 80%;
-    max-height: 500px;
+    height: 90%;
+    /*전체 100% 기준*/
+    /* max-width: 400px; */
+    /* max-height: 700px; */
+    max-width: 70vw;
+    max-height: 80vh;
   }
   .modal-content h2 {
     flex: 0 0 64px;
-    margin-bottom: 0.3rem;
-    /* margin-bottom: 0.15rem; */
-    padding: 0.25rem 0.8rem;
+    padding-left: 1rem;
     font-size: 1.5rem;
   }
-  .modal-items-list {
+  /* .modal-items-list {
     padding: 0.25rem;
-    /* border: 1px solid red; */
-  }
+  } */
   .order-btn {
-    flex: 0 0 50px;
-    margin-top: 0.3rem;
+    flex: 0 0 54px;
   }
   .close-modal-btn,
   .add-cart-btn {
-    font-size: 1.2rem;
-  }
-  .close-modal-btn .icon,
-  .add-cart-btn .icon {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .modal-content {
     width: 80%;
-    height: 70%;
-    max-height: 500px;
+    height: 90%;
+    /**/
+    /* max-width: 500px; */
+    /* max-height: 700px; */
+    max-width: 70vw;
+    max-height: 80vh;
   }
   .modal-content h2 {
     flex: 0 0 66px;
-    margin-bottom: 0.3rem;
-    /* margin-bottom: 0.15rem; */
-    padding: 0.25rem 1rem;
+    padding-left: 1.05rem;
     font-size: 1.6rem;
   }
-  .modal-items-list {
+  /* .modal-items-list {
     padding: 0.275rem;
-    /* border: 1px solid red; */
-  }
+  } */
   .order-btn {
     flex: 0 0 56px;
-    margin-top: 0.3rem;
   }
   .close-modal-btn,
   .add-cart-btn {
-    font-size: 1.3rem;
-  }
-  .close-modal-btn .icon,
-  .add-cart-btn .icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
   .modal-content {
     width: 75%;
-    height: 70%;
-    max-height: 600px;
+    height: 90%;
+
+    /**/
+    /* max-width: 600px; */
+    /* max-height: 800px; */
+    max-width: 60vw;
+    max-height: 80vh;
   }
   .modal-content h2 {
     flex: 0 0 68px;
-    margin-bottom: 0.325rem;
-    /* margin-bottom: 0.35rem; */
-    padding: 0.25rem 1.1rem;
+    padding-left: 1.1rem;
     font-size: 1.7rem;
   }
-  .modal-items-list {
+  /* .modal-items-list {
     padding: 0.3rem;
-    /* border: 1px solid red; */
-  }
+  } */
   .order-btn {
     flex: 0 0 58px;
-    margin-top: 0.325rem;
   }
   .close-modal-btn,
   .add-cart-btn {
-    font-size: 1.4rem;
-  }
-  .close-modal-btn .icon,
-  .add-cart-btn .icon {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .modal-content {
     width: 70%;
-    height: 70%;
-    max-height: 700px;
+    height: 90%;
+    /*전체 100% 기준*/
+    /* max-width: 700px; */
+    /* max-height: 800px; */
+    max-width: 60vw;
+    max-height: 80vh;
   }
   .modal-content h2 {
     flex: 0 0 70px;
-    margin-bottom: 0.35rem;
-    padding: 0.25rem 1.1rem;
+    padding-left: 1.15rem;
     font-size: 1.8rem;
   }
-  .modal-items-list {
+  /* .modal-items-list {
     padding: 0.325rem;
-  }
+  } */
   .order-btn {
     flex: 0 0 60px;
-    margin-top: 0.35rem;
   }
   .close-modal-btn,
   .add-cart-btn {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .close-modal-btn .icon,
   .add-cart-btn .icon {

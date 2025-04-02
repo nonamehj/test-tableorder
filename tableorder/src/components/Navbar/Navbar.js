@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="nav-center">
           <h2>cong cafe</h2>
         </div>
-        <div className="nav-number-center">
+        <div className="nav-number-info">
           <FaTable className="icon" />
           <span className="nav-number-table">{`T-${table}`}</span>
         </div>
