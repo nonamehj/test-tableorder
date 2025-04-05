@@ -73,7 +73,6 @@
 }
 .close-modal-btn {
   flex: 0 35%;
-  /* background-color: #fff; */
   background-color: #b0b0b0;
   color: #000;
   border-bottom-left-radius: 0.25rem;
