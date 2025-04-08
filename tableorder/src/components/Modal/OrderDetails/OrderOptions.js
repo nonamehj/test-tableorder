@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./OrderOptionsStyle.css";
 import { useGlobalContext } from "./../../../context";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 const OrderOptions = ({ uniqueId, amount, title, options, size }) => {
   const { isOrderDetails } = useGlobalContext();
   const [openItem, setOpenItem] = useState(0);
@@ -24,7 +25,17 @@ const OrderOptions = ({ uniqueId, amount, title, options, size }) => {
         className="toggle-options-btn"
         onClick={() => handleToggle(uniqueId)}
       >
-        {openItem === uniqueId ? "옵션 닫기 ▲" : "옵션 보기 ▼"}
+        {openItem === uniqueId ? (
+          <>
+            <span>추가옵션</span>
+            <FaAngleUp className="option-icon" />
+          </>
+        ) : (
+          <>
+            <span>추가옵션</span>
+            <FaAngleDown className="option-icon" />
+          </>
+        )}
       </button>
       {openItem === uniqueId && (
         <div className="options-container">

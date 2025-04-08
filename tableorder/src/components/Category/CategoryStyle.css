@@ -41,18 +41,19 @@
 }
 
 .filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.7rem;
   margin-bottom: 0.25rem;
   font-size: 1rem;
   font-weight: bold;
-  /* background-color: darkorange; */
   background-color: #fff;
   border-color: transparent;
   border-radius: 0.25rem;
-  /* color: #fff; */
   color: #000;
-  cursor: pointer;
   letter-spacing: 0.25rem;
+  cursor: pointer;
 }
 
 .active-category,
@@ -128,10 +129,7 @@
     padding: 0.1rem 0.15rem;
     /* border: 1px solid red; */
   }
-  .sidebar-container {
-    /* margin-left: 0.25rem; */
-    /* border: 1px solid blue; */
-  }
+
   .category-title {
     padding: 1rem;
     margin-bottom: 0.25rem;
@@ -162,12 +160,8 @@
     padding: 0.1rem 0.25rem;
     /**/
     padding: 0.1rem 0.175rem;
-    /* border: 1px solid blue; */
   }
-  .sidebar-container {
-    /* margin-left: 0.3rem; */
-    /* border: 1px solid blue; */
-  }
+
   .category-title {
     padding: 1rem;
     margin-bottom: 0.25rem;
@@ -179,7 +173,6 @@
     margin-bottom: 0.25rem;
     /* font-size: 1.1rem; */
     padding: 0.35rem;
-    /* border: 1px solid blue; */
   }
   .filter-btn {
     /* padding: 0.725rem; */
@@ -188,7 +181,6 @@
     font-size: 1.1rem;
 
     padding: 0.8rem 0;
-    /* border: 1px solid blue; */
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
@@ -199,10 +191,7 @@
     padding: 0.1rem 0.2rem;
     /* border: 1px solid red; */
   }
-  .sidebar-container {
-    /* margin-left: 0.35rem; */
-    /* border: 1px solid red; */
-  }
+
   .category-title {
     padding: 1rem;
     margin-bottom: 0.25rem;
@@ -234,10 +223,7 @@
     /**/
     padding: 0.1rem 0.25rem;
   }
-  .sidebar-container {
-    /* margin-left: 0.4rem; */
-    /* border: 1px solid blue; */
-  }
+
   .category-title {
     padding: 1rem;
     margin-bottom: 0.25rem;

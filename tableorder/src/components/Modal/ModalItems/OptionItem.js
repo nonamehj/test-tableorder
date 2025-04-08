@@ -49,7 +49,7 @@ const OptionItem = ({
         <div className="selected-items-info">
           {!selectDrinkOption ? (
             <div className="drink-type-warning">
-              <p>핫 또는 아이스를 선택해주세요.</p>
+              <p>핫 또는 아이스를 선택해주세요</p>
             </div>
           ) : (
             <div className="items-info">
