@@ -27,7 +27,6 @@ const OrderDetails = () => {
         </div>
         <div className="details-items-list">
           {orderItems.map((item) => {
-            // const { uniqueId, amount, title, options, size } = item;
             return <OrderOptions key={item.uniqueId} {...item} />;
           })}
         </div>

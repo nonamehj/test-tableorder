@@ -35,7 +35,6 @@ const OrderComplete = () => {
       <div className="order-modal-content">
         <div className="order-title">
           <h2>주문완료</h2>
-          {/* <p>3초 뒤에 종료됩니다</p> */}
           <p>{countdown}초 뒤에 종료됩니다</p>
         </div>
         <p className="order-message">주문 접수가 완료되었습니다</p>

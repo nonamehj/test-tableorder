@@ -13,9 +13,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 70%;
   height: 90%;
+
+  transform: translate(-50%, -50%);
   padding: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -26,6 +27,9 @@
   /* max-width: 800px; */
   /* max-height: 500px; */
   overflow: hidden;
+  /**/
+  overflow-y: auto;
+  min-height: 500px;
 }
 .modal-content h2 {
   flex: 0 0 64px;
@@ -35,7 +39,6 @@
   padding: 0.25rem;
   padding-left: 1rem;
   font-size: 1.5rem;
-  /* font-size: 1.6rem; */
   background-color: #000;
   color: yellow;
   border-top-left-radius: 0.25rem;
@@ -44,13 +47,11 @@
 .modal-items-list {
   flex: 1;
   display: flex;
-  /* padding: 0.25rem; */
-  /* border: 1px solid rgba(255, 255, 255, 0.5); */
   overflow: hidden;
-  /* border: 1px solid red; */
+  /**/
+  /* overflow-y: auto; */
 }
 .order-btn {
-  /* flex: 0 0 50px; */
   flex: 0 0 54px;
   display: flex;
   justify-content: center;
@@ -60,16 +61,16 @@
 
 .close-modal-btn,
 .add-cart-btn {
-  height: 100%;
-  background-color: transparent;
-  border-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
   font-size: 1.1rem;
   font-weight: bold;
-  cursor: pointer;
   color: #000;
+  cursor: pointer;
 }
 .close-modal-btn {
   flex: 0 35%;
@@ -80,14 +81,13 @@
 .add-cart-btn {
   flex: 1;
   background-color: #ffeb3b;
-  color: #000;
   border-bottom-right-radius: 0.25rem;
+  color: #000;
 }
 
 .close-modal-btn .icon,
 .add-cart-btn .icon {
   margin-right: 8px;
-  /* font-size: 1.3rem; */
   line-height: 1;
 }
 .close-modal-btn span,
@@ -97,12 +97,10 @@
 .close-modal-btn:hover {
   background-color: #757575;
   background-color: rgba(255, 255, 255, 0.678);
-  color: #fff;
   color: #000;
 }
 .add-cart-btn:hover {
   background-color: #fbc02d;
-  color: #fff;
   color: #000;
 }
 
@@ -117,6 +115,8 @@
     width: 100%;
     height: 100%;
     padding: 0.35rem;
+    /**/
+    min-height: 500px;
   }
   .modal-content h2 {
     flex: 0 0 60px;
@@ -129,7 +129,6 @@
   } */
   .order-btn {
     flex: 0 0 50px;
-    /* margin-top: 0.25rem; */
   }
   .close-modal-btn,
   .add-cart-btn {
@@ -147,7 +146,8 @@
     height: 100%;
     transform: translateY(90px);
     max-height: calc(100% - 90px);
-    max-width: 800px;
+
+    min-height: 500px;
   }
   .modal-content h2 {
     flex: 0 0 62px;
@@ -157,7 +157,6 @@
 
   .order-btn {
     flex: 0 0 52px;
-    /* margin-top: 0.25rem; */
   }
   .close-modal-btn,
   .add-cart-btn {
@@ -180,9 +179,9 @@
     padding-left: 1rem;
     font-size: 1.5rem;
   }
-  /* .modal-items-list {
-    padding: 0.25rem;
-  } */
+  .modal-items-list {
+    /* min-height: 550px; */
+  }
   .order-btn {
     flex: 0 0 54px;
   }
@@ -206,9 +205,6 @@
     padding-left: 1.05rem;
     font-size: 1.6rem;
   }
-  /* .modal-items-list {
-    padding: 0.275rem;
-  } */
   .order-btn {
     flex: 0 0 56px;
   }
@@ -233,9 +229,6 @@
     padding-left: 1.1rem;
     font-size: 1.7rem;
   }
-  /* .modal-items-list {
-    padding: 0.3rem;
-  } */
   .order-btn {
     flex: 0 0 58px;
   }
@@ -259,9 +252,6 @@
     padding-left: 1.15rem;
     font-size: 1.8rem;
   }
-  /* .modal-items-list {
-    padding: 0.325rem;
-  } */
   .order-btn {
     flex: 0 0 60px;
   }

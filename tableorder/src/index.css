@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 
 .main-container {
   width: 100vw;
@@ -21,6 +21,7 @@
   background-color: #000;
   overflow: hidden;
   background-color: #f2f2f2;
+  min-height: 500px;
 }
 
 .content-wrapper {

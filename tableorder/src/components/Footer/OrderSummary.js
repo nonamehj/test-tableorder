@@ -16,6 +16,7 @@ const AddItems = () => {
       setIsShaking(false);
     }, 2000);
   }, [setIsShaking]);
+
   return (
     <footer>
       <div className="footer-container">
@@ -30,9 +31,9 @@ const AddItems = () => {
           <button className="left-btn cart-order" onClick={openCart}>
             <AiOutlineShoppingCart className="icon" />
             <span>장바구니</span>
-            {cartItem.length > 0 ? (
+            {cartItem.length > 0 && (
               <span className="cart-amount">{cartAmount}</span>
-            ) : null}
+            )}
           </button>
 
           <button

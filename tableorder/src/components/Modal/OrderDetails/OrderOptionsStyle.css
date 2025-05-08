@@ -54,10 +54,8 @@
 .option-detail {
   display: flex;
   justify-content: space-between;
-  /* padding: 0.15rem; */
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.25rem;
-  /* border: 1px solid blue; */
 }
 
 @media screen and (max-width: 479px) {
@@ -73,15 +71,12 @@
   }
 
   .options-container {
-    /* margin: 0 0.6rem; */
     margin: 0 1rem;
     font-size: 0.85rem;
-    /* border: 1px solid red; */
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .details-item-container {
-    /* padding: 0.65rem 0.3rem; */
     padding: 0.5rem 0.25rem;
   }
   .details-item-info p,
@@ -89,11 +84,9 @@
     font-size: 1.05rem;
   }
   .toggle-options-btn {
-    /* font-size: 0.875rem; */
     font-size: 0.9rem;
   }
   .options-container {
-    /* margin: 0 0.7rem; */
     font-size: 0.875rem;
     margin: 0 1rem;
   }
@@ -101,7 +94,6 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .details-item-container {
-    /* padding: 0.7rem 0.35rem; */
     padding: 0.75rem 0.5rem;
   }
   .details-item-info p,
@@ -109,18 +101,15 @@
     font-size: 1.1rem;
   }
   .toggle-options-btn {
-    /* font-size: 0.9rem; */
     font-size: 0.95rem;
   }
   .options-container {
-    margin: 0 0.8rem;
-    font-size: 0.9rem;
     margin: 0 1.25rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .details-item-container {
-    /* padding: 0.75rem 0.4rem; */
     padding: 0.75rem 0.5rem;
   }
   .details-item-info p,
@@ -128,18 +117,15 @@
     font-size: 1.2rem;
   }
   .toggle-options-btn {
-    /* font-size: 0.925rem; */
     font-size: 1rem;
   }
   .options-container {
-    /* margin: 0 0.9rem; */
-    font-size: 0.925rem;
     margin: 0 1.25rem;
+    font-size: 0.925rem;
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
   .details-item-container {
-    /* padding: 0.8rem 0.45rem; */
     padding: 1rem 0.75rem;
   }
   .details-item-info p,
@@ -147,18 +133,15 @@
     font-size: 1.3rem;
   }
   .toggle-options-btn {
-    /* font-size: 0.95rem; */
     font-size: 1.05rem;
   }
   .options-container {
-    /* margin: 0 1rem; */
-    font-size: 0.95rem;
     margin: 0 1.5rem;
+    font-size: 0.95rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .details-item-container {
-    /* padding: 0.85rem 0.5rem; */
     padding: 1rem 0.75rem;
   }
   .details-item-info p,
@@ -166,12 +149,10 @@
     font-size: 1.4rem;
   }
   .toggle-options-btn {
-    /* font-size: 0.975rem; */
     font-size: 1.1rem;
   }
   .options-container {
-    /* margin: 0 1.1rem; */
-    font-size: 0.975rem;
     margin: 0 1.5rem;
+    font-size: 0.975rem;
   }
 }

@@ -1,3 +1,23 @@
+import {
+  CATEGORY_BTN,
+  SHOW_MODAL,
+  CLOSE_MODAL,
+  MODAL_DRINK_TYPE,
+  MODAL_DRINK_SIZE,
+  MODAL_ITEM_AMOUNT,
+  MODAL_QUANTITY,
+  ADD_ITEM_CART,
+  SHOW_CART,
+  CLOSE_CART,
+  CART_AMOUNT,
+  CART_ITEM_QUANTITY,
+  CART_ITEMS_DELETE,
+  ORDER_ITEMS,
+  CLOSE_ORDER,
+  ORDER_DETAILS_OPEN,
+  ORDER_DETAILS_CLOSE,
+} from "./action";
+
 const calculateItemTotal = (items) => {
   return items.map((item) => {
     let tempTypePrice =
@@ -36,11 +56,11 @@ const calculateItemTotal = (items) => {
 
 const reducer = (state, action) => {
   /*카테고리 버튼 */
-  if (action.type === "CATEGORY_BTN") {
+  if (action.type === CATEGORY_BTN) {
     return { ...state, menus: action.payload.tempItem };
   }
   /*선택시 옵션 모달 오픈 */
-  if (action.type === "SHOW_MODAL") {
+  if (action.type === SHOW_MODAL) {
     let tempItem = state.menus
       .filter((item) => item.id === action.payload.id)
       .map((item) => {
@@ -67,11 +87,11 @@ const reducer = (state, action) => {
     return { ...state, isModalOpen: true, modalItem: tempItem };
   }
   /*모달 닫기 */
-  if (action.type === "CLOSE_MODAL") {
+  if (action.type === CLOSE_MODAL) {
     return { ...state, modalItem: [], isModalOpen: false };
   }
   /*음료 핫&아이스 */
-  if (action.type === "MODAL_DRINK_TYPE") {
+  if (action.type === MODAL_DRINK_TYPE) {
     let tempItem = state.modalItem.map((item) => {
       const updateItem = { ...item, drinkType: action.payload };
       const [itemTotal] = calculateItemTotal([updateItem]);
@@ -80,7 +100,7 @@ const reducer = (state, action) => {
     return { ...state, modalItem: tempItem };
   }
   /*음료 사이즈 */
-  if (action.type === "MODAL_DRINK_SIZE") {
+  if (action.type === MODAL_DRINK_SIZE) {
     let tempItem = state.modalItem.map((item) => {
       const updateItem = { ...item, size: action.payload };
       const [itemTotal] = calculateItemTotal([updateItem]);
@@ -89,7 +109,7 @@ const reducer = (state, action) => {
     return { ...state, modalItem: tempItem };
   }
   /*모달 아이템 수량 */
-  if (action.type === "MODAL_ITEM_AMOUNT") {
+  if (action.type === MODAL_ITEM_AMOUNT) {
     let tempItem = state.modalItem.map((item) => {
       let updatedAmount = item.amount;
       if (action.payload === "inc") {
@@ -104,7 +124,7 @@ const reducer = (state, action) => {
     return { ...state, modalItem: tempItem };
   }
   /*모달아이템 옵션 선택 */
-  if (action.type === "MODAL_QUANTITY") {
+  if (action.type === MODAL_QUANTITY) {
     const { id, type } = action.payload;
 
     const tempItem = state.modalItem.map((item) => {
@@ -128,7 +148,7 @@ const reducer = (state, action) => {
     return { ...state, modalItem: tempItem };
   }
   /*모달선택 아이템 장바구니 담기 */
-  if (action.type === "ADD_ITEM_CART") {
+  if (action.type === ADD_ITEM_CART) {
     let tempItem = state.modalItem.map((item) => {
       return { ...item, uniqueId: `${item.id}-${Date.now()}` };
     });
@@ -140,7 +160,7 @@ const reducer = (state, action) => {
     };
   }
   /*footer 장바구니 카트 오픈 */
-  if (action.type === "SHOW_CART") {
+  if (action.type === SHOW_CART) {
     let tempTotal = state.cartItem.reduce((prev, cur) => {
       prev += cur.itemTotal;
       return prev;
@@ -151,10 +171,10 @@ const reducer = (state, action) => {
     return { ...state, isCartOpen: true, total: tempTotal };
   }
   /*장바구니 닫기 */
-  if (action.type === "CLOSE_CART") {
+  if (action.type === CLOSE_CART) {
     return { ...state, isCartOpen: false };
   }
-  if (action.type === "CART_AMOUNT") {
+  if (action.type === CART_AMOUNT) {
     let cartAmount = state.cartItem.reduce((prev, cur) => {
       prev += cur.amount;
       return prev;
@@ -162,7 +182,7 @@ const reducer = (state, action) => {
     return { ...state, cartAmount };
   }
   /*장바구니 아이템 수량 */
-  if (action.type === "CART_ITEM_QUANTITY") {
+  if (action.type === CART_ITEM_QUANTITY) {
     let tempItem = state.cartItem.map((item) => {
       if (item.uniqueId === action.payload.uniqueId) {
         let updatedAmount = item.amount;
@@ -181,11 +201,7 @@ const reducer = (state, action) => {
     return { ...state, cartItem: tempItem, total: tempTotal };
   }
   /*장바구니 아이템 삭제 */
-  if (action.type === "CART_ITEMS_DELETE") {
-    // let tempItem = state.cartItem.filter(
-    //   (item) => item.uniqueId !== action.payload
-    // );
-
+  if (action.type === CART_ITEMS_DELETE) {
     let updatedCartItems = state.cartItem.filter(
       (item) => item.uniqueId !== action.payload
     );
@@ -200,11 +216,10 @@ const reducer = (state, action) => {
       total: updatedTotal,
       isCartOpen,
     };
-    // return { ...state, cartItem: tempItem };
   }
 
   /*장바구니 주문하기 */
-  if (action.type === "ORDER_ITEMS") {
+  if (action.type === ORDER_ITEMS) {
     return {
       ...state,
       orderItems: [...state.orderItems, ...state.cartItem],
@@ -212,39 +227,29 @@ const reducer = (state, action) => {
       isOrderCompleted: true,
       isCartOpen: false,
       totalPrice: state.totalPrice + state.total,
-      // cartItem: [],
     };
   }
   /*주문하기 완료 후  주문내역 닫기버튼  */
-  if (action.type === "CLOSE_ORDER") {
+  if (action.type === CLOSE_ORDER) {
     return { ...state, isOrderCompleted: false, cartItem: [], total: 0 };
   }
   /*footer 주문내역 열기 */
-  if (action.type === "ORDER_DETAILS_OPEN") {
+  if (action.type === ORDER_DETAILS_OPEN) {
     return { ...state, isOrderDetails: true };
   }
   /*footer 주문내역 닫기 */
-  if (action.type === "ORDER_DETAILS_CLOSE") {
+  if (action.type === ORDER_DETAILS_CLOSE) {
     return { ...state, isOrderDetails: false };
   }
   /* 상품 수량*/
-  if (action.type === "CART_AMOUNT") {
-    // let cartAmount = state.cartItem.reduce((prev, cur) => {
-    //   prev += cur.amount;
-    //   return prev;
-    // }, 0);
+  // if (action.type === "CART_AMOUNT") {
+  //   let cartAmount = action.payload.cartAmount ? action.payload.cartAmount : 0;
 
-    let cartAmount = action.payload.cartAmount ? action.payload.cartAmount : 0;
-    // let isCartOpen = action.payload.isCartOpen
-    //   ? action.payload.isCartOpen
-    //   : state.isCartOpen;
-
-    return {
-      ...state,
-      cartAmount,
-      // isCartOpen,
-    };
-  }
+  //   return {
+  //     ...state,
+  //     cartAmount,
+  //   };
+  // }
 
   return state;
 };
