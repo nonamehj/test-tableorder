@@ -145,6 +145,7 @@
 @media screen and (max-width: 479px) {
   .cart-container {
     width: 70%;
+    min-height: 500px;
   }
   .cart-title {
     flex: 0 0 90px;
@@ -180,6 +181,7 @@
   .cart-container {
     width: 60%;
     max-width: 350px;
+    min-height: 500px;
   }
   .cart-title {
     flex: 0 0 90px;
@@ -218,6 +220,7 @@
   .cart-container {
     width: 50%;
     max-width: 400px;
+    min-height: 700px;
   }
   .cart-title {
     flex: 0 0 80px;
@@ -254,6 +257,7 @@
   .cart-container {
     width: 45%;
     max-width: 450px;
+    min-height: 800px;
   }
   .cart-title {
     flex: 0 0 90px;
@@ -290,6 +294,7 @@
   .cart-container {
     width: 40%;
     max-width: 500px;
+    min-height: 700px;
   }
   .cart-title {
     flex: 0 0 100px;
@@ -325,6 +330,7 @@
   .cart-container {
     width: 40%;
     max-width: 500px;
+    min-height: 700px;
   }
   .cart-title {
     flex: 0 0 110px;
