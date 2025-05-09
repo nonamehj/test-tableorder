@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-tableorder/static/css/main.cb21419d.css",
-    "main.js": "/test-tableorder/static/js/main.881da69b.js",
+    "main.js": "/test-tableorder/static/js/main.d324bac2.js",
     "static/media/밀크티.webp": "/test-tableorder/static/media/밀크티.ed3e79295d1ebeab6ab5.webp",
     "static/media/딸기티.webp": "/test-tableorder/static/media/딸기티.d59832d0e92e8fc52c46.webp",
     "static/media/레몬티.webp": "/test-tableorder/static/media/레몬티.f31d51d969be1c7b67e3.webp",
@@ -40,10 +40,10 @@
     "static/media/플레인요거트.webp": "/test-tableorder/static/media/플레인요거트.c2ba5359d3ff4f7411bd.webp",
     "index.html": "/test-tableorder/index.html",
     "main.cb21419d.css.map": "/test-tableorder/static/css/main.cb21419d.css.map",
-    "main.881da69b.js.map": "/test-tableorder/static/js/main.881da69b.js.map"
+    "main.d324bac2.js.map": "/test-tableorder/static/js/main.d324bac2.js.map"
   },
   "entrypoints": [
     "static/css/main.cb21419d.css",
-    "static/js/main.881da69b.js"
+    "static/js/main.d324bac2.js"
   ]
 }
