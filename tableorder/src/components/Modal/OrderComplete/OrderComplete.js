@@ -8,21 +8,21 @@ const OrderComplete = () => {
 
   const [countdown, setCountdown] = useState(3);
 
-  // useEffect(() => {
-  //   if (!isOrderCompleted) return;
-  //   const intervalId = setInterval(() => {
-  //     setCountdown((prev) => prev - 1);
-  //   }, 1000);
-  //   const timeoutId = setTimeout(() => {
-  //     closeOrderModal();
-  //   }, 3000);
+  useEffect(() => {
+    if (!isOrderCompleted) return;
+    const intervalId = setInterval(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000);
+    const timeoutId = setTimeout(() => {
+      closeOrderModal();
+    }, 3000);
 
-  //   return () => {
-  //     clearInterval(intervalId);
-  //     clearTimeout(timeoutId);
-  //     setCountdown(3);
-  //   };
-  // }, [isOrderCompleted, closeOrderModal]);
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+      setCountdown(3);
+    };
+  }, [isOrderCompleted, closeOrderModal]);
 
   return (
     <div
