@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/test-tableorder/static/css/main.64b1c3aa.css",
+    "main.css": "/test-tableorder/static/css/main.cb21419d.css",
     "main.js": "/test-tableorder/static/js/main.881da69b.js",
     "static/media/밀크티.webp": "/test-tableorder/static/media/밀크티.ed3e79295d1ebeab6ab5.webp",
     "static/media/딸기티.webp": "/test-tableorder/static/media/딸기티.d59832d0e92e8fc52c46.webp",
@@ -39,11 +39,11 @@
     "static/media/청포도에이드2.webp": "/test-tableorder/static/media/청포도에이드2.1074a48d87749d8b4dc2.webp",
     "static/media/플레인요거트.webp": "/test-tableorder/static/media/플레인요거트.c2ba5359d3ff4f7411bd.webp",
     "index.html": "/test-tableorder/index.html",
-    "main.64b1c3aa.css.map": "/test-tableorder/static/css/main.64b1c3aa.css.map",
+    "main.cb21419d.css.map": "/test-tableorder/static/css/main.cb21419d.css.map",
     "main.881da69b.js.map": "/test-tableorder/static/js/main.881da69b.js.map"
   },
   "entrypoints": [
-    "static/css/main.64b1c3aa.css",
+    "static/css/main.cb21419d.css",
     "static/js/main.881da69b.js"
   ]
 }
