@@ -18,13 +18,13 @@
   height: 80%;
   max-width: 70vw;
   max-height: 80vh;
-  background-color: #4d4d4d;
-  padding: 0.25rem;
+  min-height: 550px;
   display: flex;
   flex-direction: column;
+  padding: 0.25rem;
+  background-color: #4d4d4d;
   border-radius: 0.25rem;
   overflow-y: auto;
-  min-height: 300px;
 }
 .details-title {
   flex: 0 0 64px;
@@ -43,12 +43,11 @@
 }
 .details-items-list {
   flex: 1;
+  min-height: 300px;
   padding: 0.4rem 1.25rem;
   margin-bottom: 0.25rem;
   background-color: #fff;
   overflow: auto;
-  /**/
-  min-height: 300px;
 }
 
 .details-summary {
@@ -99,6 +98,9 @@
   line-height: 1;
 }
 @media screen and (max-width: 479px) {
+  .show-details {
+    overflow-y: auto;
+  }
   .details-modal-content {
     position: absolute;
     top: 0;
@@ -110,7 +112,7 @@
     transform: translateY(90px);
     max-width: 800px;
     max-height: calc(100% - 90px);
-    min-height: 500px;
+    min-height: 450px;
   }
 
   .details-title {
@@ -135,6 +137,9 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .show-details {
+    overflow-y: auto;
+  }
   .details-modal-content {
     position: absolute;
     top: 0;
@@ -171,9 +176,6 @@
   .details-modal-content {
     width: 70%;
     height: 80%;
-    /**/
-    /* max-width: 400px; */
-    /* max-height: 700px; */
     max-width: 70vw;
     max-height: 80vh;
     min-height: 550px;
@@ -202,12 +204,9 @@
   .details-modal-content {
     width: 80%;
     height: 70%;
-    /**/
-    /* max-width: 500px; */
-    /* max-height: 700px; */
     max-width: 70vw;
     max-height: 80vh;
-    min-height: 650px;
+    min-height: 600px;
   }
   .details-title {
     flex: 0 0 66px;
@@ -232,9 +231,6 @@
   .details-modal-content {
     width: 75%;
     height: 70%;
-    /**/
-    /* max-width: 600px; */
-    /* max-height: 800px; */
     max-width: 60vw;
     max-height: 80vh;
     min-height: 550px;
@@ -262,9 +258,6 @@
   .details-modal-content {
     width: 70%;
     height: 70%;
-    /**/
-    /* max-width: 700px; */
-    /* max-height: 800px; */
     max-width: 60vw;
     max-height: 80vh;
     min-height: 550px;

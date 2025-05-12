@@ -15,22 +15,14 @@
   left: 50%;
   width: 70%;
   height: 90%;
-
   transform: translate(-50%, -50%);
-  padding: 0.25rem;
   display: flex;
   flex-direction: column;
+  padding: 0.25rem;
+  min-height: 550px;
   background-color: #4d4d4d;
-
   border-radius: 0.25rem;
-  /*아래 확인후  제대로된 위치 넣거나 삭제하기 max-width,height*/
-  /* max-width: 800px; */
-  /* max-height: 500px; */
-  overflow: hidden;
-  /**/
   overflow-y: auto;
-  min-height: 500px;
-  border: 2px solid red;
 }
 .modal-content h2 {
   flex: 0 0 64px;
@@ -49,8 +41,6 @@
   flex: 1;
   display: flex;
   overflow: hidden;
-  /**/
-  /* overflow-y: auto; */
 }
 .order-btn {
   flex: 0 0 54px;
@@ -76,8 +66,8 @@
 .close-modal-btn {
   flex: 0 35%;
   background-color: #b0b0b0;
-  color: #000;
   border-bottom-left-radius: 0.25rem;
+  color: #000;
 }
 .add-cart-btn {
   flex: 1;
@@ -106,6 +96,9 @@
 }
 
 @media screen and (max-width: 479px) {
+  .show-modal-container {
+    overflow-y: auto;
+  }
   .modal-content {
     bottom: 0;
     right: 0;
@@ -113,21 +106,17 @@
     top: 0;
     transform: translateY(90px);
     max-height: calc(100% - 90px);
+    min-height: 450px;
     width: 100%;
     height: 100%;
     padding: 0.35rem;
-    /**/
-    min-height: 500px;
   }
   .modal-content h2 {
     flex: 0 0 60px;
     padding-left: 0.5rem;
     font-size: 1.4rem;
   }
-  /*공통패딩*/
-  /* .modal-items-list {
-    padding: 0.25rem;
-  } */
+
   .order-btn {
     flex: 0 0 50px;
   }
@@ -138,6 +127,9 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .show-modal-container {
+    overflow-y: auto;
+  }
   .modal-content {
     bottom: 0;
     right: 0;
@@ -145,9 +137,9 @@
     top: 0;
     width: 100%;
     height: 100%;
-    transform: translateY(90px);
     max-height: calc(100% - 90px);
     min-height: 500px;
+    transform: translateY(90px);
   }
   .modal-content h2 {
     flex: 0 0 62px;
@@ -168,9 +160,6 @@
   .modal-content {
     width: 70%;
     height: 90%;
-    /*전체 100% 기준*/
-    /* max-width: 400px; */
-    /* max-height: 700px; */
     max-width: 70vw;
     max-height: 80vh;
     min-height: 550px;
@@ -180,9 +169,7 @@
     padding-left: 1rem;
     font-size: 1.5rem;
   }
-  .modal-items-list {
-    /* min-height: 550px; */
-  }
+
   .order-btn {
     flex: 0 0 54px;
   }
@@ -195,12 +182,9 @@
   .modal-content {
     width: 80%;
     height: 90%;
-    /**/
-    /* max-width: 500px; */
-    /* max-height: 700px; */
     max-width: 70vw;
     max-height: 80vh;
-    min-height: 650px;
+    min-height: 600px;
   }
   .modal-content h2 {
     flex: 0 0 66px;
@@ -219,10 +203,6 @@
   .modal-content {
     width: 75%;
     height: 90%;
-
-    /**/
-    /* max-width: 600px; */
-    /* max-height: 800px; */
     max-width: 60vw;
     max-height: 80vh;
     min-height: 550px;
@@ -244,9 +224,6 @@
   .modal-content {
     width: 70%;
     height: 90%;
-    /*전체 100% 기준*/
-    /* max-width: 700px; */
-    /* max-height: 800px; */
     max-width: 60vw;
     max-height: 80vh;
     min-height: 550px;

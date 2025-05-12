@@ -18,13 +18,10 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0.25rem;
+  min-height: 600px;
   background-color: #4d4d4d;
   transition: all 0.3s linear;
-
-  /**/
-  /* overflow: hidden; */
   overflow-y: auto;
-  min-height: 500px;
 }
 .cart-title {
   flex: 0 0 80px;
@@ -70,7 +67,6 @@
   background-color: #fafafa;
   padding: 0.3rem;
   overflow: auto;
-  /* overflow: hidden; */
   min-height: 300px;
 }
 
@@ -112,8 +108,8 @@
   font-size: 1.1rem;
   font-weight: bold;
   color: #000;
-  cursor: pointer;
   line-height: 1;
+  cursor: pointer;
 }
 
 .cart-left {
@@ -145,7 +141,7 @@
 @media screen and (max-width: 479px) {
   .cart-container {
     width: 70%;
-    min-height: 500px;
+    min-height: 450px;
   }
   .cart-title {
     flex: 0 0 90px;
@@ -157,6 +153,7 @@
   .cart-items-container {
     grid-auto-rows: 100px;
     padding: 0.25rem;
+    min-height: 100px;
   }
   .cart-item-total {
     flex: 0 0 50px;
@@ -188,12 +185,12 @@
     padding: 1rem;
   }
   .cart-title h2 {
-    font-size: 1.4rem;
     font-size: 1.45rem;
   }
   .cart-items-container {
     grid-auto-rows: 110px;
     padding: 0.25rem;
+    min-height: 150px;
   }
   .cart-item-total {
     flex: 0 0 50px;
@@ -220,7 +217,7 @@
   .cart-container {
     width: 50%;
     max-width: 400px;
-    min-height: 700px;
+    min-height: 600px;
   }
   .cart-title {
     flex: 0 0 80px;
@@ -257,7 +254,7 @@
   .cart-container {
     width: 45%;
     max-width: 450px;
-    min-height: 800px;
+    min-height: 700px;
   }
   .cart-title {
     flex: 0 0 90px;
@@ -294,7 +291,7 @@
   .cart-container {
     width: 40%;
     max-width: 500px;
-    min-height: 700px;
+    min-height: 600px;
   }
   .cart-title {
     flex: 0 0 100px;
@@ -330,7 +327,7 @@
   .cart-container {
     width: 40%;
     max-width: 500px;
-    min-height: 700px;
+    min-height: 600px;
   }
   .cart-title {
     flex: 0 0 110px;

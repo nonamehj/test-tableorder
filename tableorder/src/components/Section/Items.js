@@ -11,7 +11,6 @@ const Items = ({ img, title, price, id, category }) => {
         <div className="item-img">
           <img src={img} alt={title} className="single-item-img" />
         </div>
-
         <div className="item-info">
           <p>{title}</p>
           <p>{price.toLocaleString()}원</p>

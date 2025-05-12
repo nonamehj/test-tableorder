@@ -418,8 +418,8 @@ const data = [
     drinkOption: ["hot"],
     options: [
       { id: 1, name: "레몬 조각 추가", price: 200 },
-      { id: 2, name: "시럽 추가", price: 150 },
-      { id: 3, name: "민트 잎 추가", price: 150 },
+      { id: 2, name: "민트 잎 추가", price: 150 },
+      { id: 3, name: "시럽 추가", price: 150 },
     ],
   },
   {
@@ -474,8 +474,8 @@ const data = [
     drinkOption: ["hot"],
     options: [
       { id: 1, name: "베리 추가", price: 200 },
-      { id: 2, name: "시럽 추가", price: 150 },
-      { id: 3, name: "레몬 추가", price: 150 },
+      { id: 2, name: "레몬 추가", price: 150 },
+      { id: 3, name: "시럽 추가", price: 150 },
     ],
   },
   {
@@ -501,9 +501,9 @@ const data = [
     coffeeSize: ["regular"],
     drinkOption: ["hot"],
     options: [
-      { id: 1, name: "시럽 추가", price: 150 },
+      { id: 1, name: "민트 잎 추가", price: 150 },
       { id: 2, name: "레몬 추가", price: 150 },
-      { id: 3, name: "민트 잎 추가", price: 150 },
+      { id: 3, name: "시럽 추가", price: 150 },
     ],
   },
   {
@@ -516,11 +516,9 @@ const data = [
     drinkOption: ["hot"],
     options: [
       { id: 1, name: "자몽 조각 추가", price: 300 },
-      { id: 2, name: "시럽 추가", price: 200 },
       { id: 3, name: "레몬 조각 추가", price: 200 },
+      { id: 2, name: "시럽 추가", price: 200 },
     ],
   },
 ];
 export default data;
-
-// export const jsonData = JSON.stringify(data, null, 2);

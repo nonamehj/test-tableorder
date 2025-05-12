@@ -12,10 +12,7 @@ const MenuList = () => {
     }
   }, [menus]);
   return (
-    <section
-      // className={`${isAddItemOpen ? "section show-section" : "section"}`}
-      className="section"
-    >
+    <section className="section">
       <div className="menulist-container" ref={valueRef}>
         <div className="menulist-center">
           {menus.map((item) => {

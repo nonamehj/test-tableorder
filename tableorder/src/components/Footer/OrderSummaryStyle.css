@@ -15,26 +15,26 @@ footer {
 .call-btn,
 .left-btn,
 .right-btn {
-  width: auto;
-  margin: 0.3rem 0.5rem;
-  padding: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0.3rem 0.5rem;
+  padding: 0.6rem;
+  width: auto;
   font-size: 1rem;
   font-weight: bold;
   background-color: #fff;
   border-color: transparent;
   color: #000;
   border-radius: 0.25rem;
-  cursor: pointer;
   border: 1px solid #000;
+  cursor: pointer;
 }
 .call-btn .icon,
 .left-btn .icon,
 .right-btn .icon {
-  font-size: 1rem;
   margin-right: 8px;
+  font-size: 1rem;
   line-height: 1;
 }
 .footer-container span {
@@ -53,10 +53,10 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #f44336;
+  border-radius: 50%;
   color: #fff;
   font-size: 0.8rem;
   font-weight: bold;
-  border-radius: 50%;
 }
 .shaking-button {
   background-color: #f44336;

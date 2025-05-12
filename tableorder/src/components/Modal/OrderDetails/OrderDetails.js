@@ -10,14 +10,6 @@ const OrderDetails = () => {
     totalPrice,
     closeOrderDetails,
   } = useGlobalContext();
-  // const [openItem, setOpenItem] = useState(0);
-  // const handleToggle = (id) => {
-  //   setOpenItem(openItem === id ? null : id);
-  // };
-
-  // useEffect(() => {
-  //   if (!isOrderDetails) setOpenItem(0);
-  // }, [isOrderDetails]);
 
   return (
     <div className={`${isOrderDetails ? "details show-details" : "details"}`}>

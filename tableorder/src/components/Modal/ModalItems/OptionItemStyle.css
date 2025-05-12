@@ -161,8 +161,6 @@
 .btn-row .active-size,
 .coffee-size:hover {
   /* color: #b0b0b0; */
-
-  /**/
   color: #000;
 }
 .btn-row .minus,
@@ -224,6 +222,9 @@
   padding: 0.25rem;
 }
 @media screen and (max-width: 479px) {
+  .modal-item-details {
+    overflow-y: auto;
+  }
   .modal-menuItem,
   .modal-info {
     grid-row: 1 / 5;
@@ -232,7 +233,7 @@
 
   .selected-items-info {
     grid-row: 5 / 11;
-    border: 3px solid purple;
+    min-height: 100px;
   }
   .modal-item-title h3 {
     font-size: 1rem;
@@ -247,8 +248,6 @@
   .drink-type-warning {
     font-size: 1rem;
   }
-
-  /**/
   .items-info {
     min-height: 300px;
   }
@@ -283,14 +282,18 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .modal-item-details {
+    overflow: auto;
+  }
   .modal-menuItem,
   .modal-info {
     grid-row: 1 / 5;
     min-height: 150px;
+    overflow-y: auto;
   }
-
   .selected-items-info {
     grid-row: 5 / 11;
+    min-height: 150px;
   }
   .modal-item-title h3 {
     font-size: 1.1rem;
@@ -397,7 +400,6 @@
   .drink-type-warning {
     font-size: 1.2rem;
   }
-
   .size-selection-row,
   .quantity-selection-row,
   .coffee-row {
@@ -457,7 +459,6 @@
   .btn-row .plus {
     font-size: 1.3rem;
   }
-
   .btn-row span {
     font-size: 1.3rem;
   }
@@ -482,7 +483,6 @@
   .iced-type {
     font-size: 1.3rem;
   }
-
   .drink-type-warning {
     font-size: 1.4rem;
   }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./CategoryStyle.css";
 import data from "../../data";
-// import { jsonData } from "../data";
 import { useGlobalContext } from "./../../context";
 const allCategories = ["전체", ...new Set(data.map((item) => item.category))];
 

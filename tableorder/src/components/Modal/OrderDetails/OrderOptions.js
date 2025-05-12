@@ -7,7 +7,6 @@ const OrderOptions = ({ uniqueId, amount, title, options, size }) => {
   const [openItem, setOpenItem] = useState(0);
 
   const handleToggle = useCallback((id) => {
-    // setOpenItem(openItem === id ? null : id);
     setOpenItem((prev) => (prev === id ? null : id));
   }, []);
 
