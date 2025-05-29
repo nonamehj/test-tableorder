@@ -91,13 +91,13 @@ src/
 
 ## 🧩 컴포넌트 및 주요 로직 파일 설명
 
-## ✅ 컴포넌트
+### 📁 컴포넌트
 
-### 📁 Category (Category/Category.js)
+#### Category (Category/Category.js)
 
 메뉴 카테고리를 선택할 수 있는 버튼들을 제공하는 컴포넌트입니다.
 
-### 📁 OrderSummary (Footer/OrderSummary)
+#### OrderSummary (Footer/OrderSummary)
 
 하단에 위치한 주문 관련 버튼들을 포함합니다.
 
@@ -105,79 +105,79 @@ src/
 - 장바구니 버튼: 선택된 물품 수량이 표시되며 클릭 시 장바구니 화면이 열립니다.
 - 주문내역 버튼: 주문 완료 후 주문내역을 확인할 수 있습니다.
 
-### 📁 ItemCart (Modal/ItemCart/ItemCart)
+#### ItemCart (Modal/ItemCart/ItemCart)
 
 - 장바구니 버튼 클릭 시 나타나는 모달 컴포넌트입니다.
   선택된 물품 전체 수량, 총 가격, 닫기 및 주문하기 버튼이 포함되어 있습니다.
 - 자식 컴포넌트: `ItemCartDetails`
 
-### ItemCartDetails (Modal/ItemCart/ItemCartDetails)
+#### ItemCartDetails (Modal/ItemCart/ItemCartDetails)
 
 - 개별 선택 항목에 대한 정보 (이름, 수량 증감 버튼, 삭제 버튼, 가격)를 보여주는 컴포넌트입니다.
 
-### ModalItem (Modal/ModalItems/ModalItem)
+#### ModalItem (Modal/ModalItems/ModalItem)
 
 - 아이템 선택 시 옵션을 선택할 수 있는 모달입니다.
   닫기 버튼과 장바구니 담기 버튼이 포함됩니다.
 
 - 자식 컴포넌트: `OptionItem`
 
-### OptionItem (Modal/ModalItems/OptionItem)
+#### OptionItem (Modal/ModalItems/OptionItem)
 
 - 선택한 음료의 옵션(온도, 사이즈, 수량 등)을 설정하고 가격을 표시하는 컴포넌트입니다.
 
-### OrderComplete (Modal/OrderComplete/OrderComplete)
+#### OrderComplete (Modal/OrderComplete/OrderComplete)
 
 - 장바구니에서 주문하기를 클릭했을 때 나타나는 주문 완료 알림입니다.
   간단한 주문 정보(아이템 이름, 수량)가 표시되고, 5초 후 자동으로 닫힙니다.
 
-### OrderDetails (Modal/OrderDetails/OrderDetails)
+#### OrderDetails (Modal/OrderDetails/OrderDetails)
 
 - 주문내역 버튼 클릭 시 나타나는 주문 내역 모달입니다.
   지금까지 주문한 전체 아이템 목록, 옵션, 수량, 총합계가 표시됩니다.
 
 - 자식 컴포넌트: `OrderOptions`
 
-### OrderOptions (Modal/OrderDetails/OrderOptions)
+#### OrderOptions (Modal/OrderDetails/OrderOptions)
 
 - 주문 아이템의 세부 옵션 정보를 보여주는 토글 방식의 컴포넌트입니다.
 
-### Navbar (Navbar/Navbar)
+#### Navbar (Navbar/Navbar)
 
 - 로고와 함께 현재 테이블 번호를 표시하는 상단 바입니다.
 
-### MenuList (Section/MenuList)
+#### MenuList (Section/MenuList)
 
 - 전체 아이템들을 grid 형태로 나열하는 레이아웃 컨테이너 역할을 합니다.
 
 - 자식 컴포넌트: `Items`
 
-### Items (Section/Items)
+#### Items (Section/Items)
 
 - 음료의 이미지, 이름, 가격, 옵션 선택 버튼을 보여주는 개별 메뉴 카드 컴포넌트입니다.
 
-### App
+#### App
 
 - 전체 앱의 루트 컴포넌트입니다. 위에 언급된 주요 컴포넌트들을 포함하여 렌더링합니다.
 
-## ✅ 파일
+#### ✅ 파일
 
-### data
+#### data
 
 - 실제 API 호출 없이 사용자가 정의한 정적 데이터 파일입니다.
   음료 이름, 가격, 이미지, 사이즈, 옵션 정보 등이 포함되어 있습니다.
 
-### context
+#### context
 
 전역 상태 관리를 위한 Context 설정 파일입니다.
 각 컴포넌트에서 reducer로 상태를 전달받을 수 있도록 구성되어 있습니다.
 
-### reducer
+#### reducer
 
 - 앱 내 상태 변화(예: 항목 선택, 수량 변경, 모달 열기 등)를 처리하는 로직을 포함한 리듀서 함수입니다.
   각 상황에 따른 동작들을 정의하여 UI 상태를 제어합니다.
 
-### action
+#### action
 
 - reducer에서 사용되는 action type 들을 분리하여 정의한 상수 모음입니다.
   액션의 목적을 명확히 하고 유지 보수를 쉽게 하기 위해 사용됩니다.
