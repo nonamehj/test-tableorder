@@ -1,11 +1,3 @@
-.sidebar-container::-webkit-scrollbar {
-  display: none;
-}
-.sidebar-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 .category {
   display: flex;
   flex-direction: column;
